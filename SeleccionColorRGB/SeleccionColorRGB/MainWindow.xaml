@@ -1,0 +1,53 @@
+﻿<Window x:Class="SeleccionColorRGB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeleccionColorRGB"
+        mc:Ignorable="d"
+        Title="Selección Color RGB" Height="300" Width="400">
+    <Grid>
+        <!--Definir las filas -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <!--Primera fila grid-->
+        <Label Grid.Row="0" Content="Selecciona un color RGB: " FontSize="24" HorizontalAlignment="Center" FontFamily="Trebuchet MS" 
+               FontWeight="Bold" Margin="0,10,0,0"/>
+
+        <!--COntenedor de colores-->
+        <Grid Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="90"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Labels y ComboBox para rojo, verde y azul-->
+            <Label Content="Rojo" Grid.Row="0" Grid.Column="0" FontSize="20" FontFamily="Avenir" FontWeight="Bold"/>
+            <ComboBox x:Name="comboRojo" Grid.Row="0" Grid.Column="1" Margin="10,0" Width="Auto"
+                      MaxWidth="100" FontSize="20" FontFamily="Avenir" FontWeight="Bold"/>
+
+            <Label Content="Verde" Grid.Row="1" Grid.Column="0" FontSize="20" FontFamily="Avenir" FontWeight="Bold"/>
+            <ComboBox x:Name="comboVerde" Grid.Row="1" Grid.Column="1" Margin="10,0" Width="Auto"
+                      MaxWidth="100" FontSize="20" FontFamily="Avenir" FontWeight="Bold"/>
+
+            <Label Content="Azul" Grid.Row="2" Grid.Column="0" FontSize="20" FontFamily="Avenir" FontWeight="Bold"/>
+            <ComboBox x:Name="comboAzul" Grid.Row="2" Grid.Column="1" Margin="10,0" Width="Auto"
+                      MaxWidth="100" FontSize="20" FontFamily="Avenir" FontWeight="Bold"/>
+
+        </Grid>
+        <!--Boton Pintar-->
+        <Button x:Name="btnPintar" Content="Pintar" Grid.Row="2" Width="300" Margin="47,10,46.6,16.4"
+                FontFamily="Avenir" FontSize="20" Click="btnPintar_click" FontWeight="Bold" VerticalAlignment="Center"
+                HorizontalAlignment="Center" Height="44"/>
+    </Grid>
+</Window>
